@@ -360,4 +360,10 @@ object PreferencesUtil {
         return prefs.getBoolean(context.getString(R.string.autofill_auto_search_key),
                 context.resources.getBoolean(R.bool.autofill_auto_search_default))
     }
+
+    fun isAutofillAddAppIdEnable(context: Context):Boolean {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        return prefs.getBoolean(context.getString(R.string.autofill_add_id_key),
+                context.resources.getBoolean(R.bool.autofill_add_id_default))
+    }
 }

@@ -383,6 +383,8 @@
     <string name="keyboard_key_sound_title">Audible keypresses</string>
     <string name="autofill_auto_search_title">Auto search</string>
     <string name="autofill_auto_search_summary">Automatically suggest search results from the web domain or applicationId</string>
+    <string name="autofill_add_id_title">Populate app id</string>
+    <string name="autofill_add_id_summary">Add the applicationId or the web domain to the manually selected entry</string>
     <string name="allow_no_password_title">Allow no master key</string>
     <string name="allow_no_password_summary">Enable the \"Open\" button if no credentials are selected</string>
     <string name="delete_entered_password_title">Delete password</string>

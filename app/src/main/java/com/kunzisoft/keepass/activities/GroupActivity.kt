@@ -491,10 +491,15 @@ class GroupActivity : LockingActivity(),
                         },
                         {
                             // Build response with the entry selected
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && mDatabase != null) {
-                                mDatabase?.let { database ->
-                                    AutofillHelper.buildResponse(this@GroupActivity,
-                                            entryVersioned.getEntryInfo(database))
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                if (PreferencesUtil.isAutofillAddAppIdEnable(this)) {
+                                    // TODO Register the app id
+
+                                } else {
+                                    mDatabase?.let { database ->
+                                        AutofillHelper.buildResponse(this@GroupActivity,
+                                                entryVersioned.getEntryInfo(database))
+                                    }
                                 }
                             }
                             finish()
