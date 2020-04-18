@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2019 Jeremy Jamet / Kunzisoft.
-     
- This file is part of KeePassDX.
+    Copyright 2020 Jeremy Jamet / Kunzisoft.
 
-  KeePassDX is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+    This file is part of KeePassDX.
 
-  KeePassDX is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+    KeePassDX is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-  You should have received a copy of the GNU General Public License
-  along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
+    KeePassDX is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources>
     <string name="feedback">Зворотний зв’язок:</string>
@@ -104,7 +104,6 @@
     <string name="never">Ніколи</string>
     <string name="no_results">Нічого не знайдено.</string>
     <string name="no_url_handler">Нема програми для опрацювання цього посилання.</string>
-    <string name="open_recent">Відкрити останню базу даних :</string>
     <string name="omit_backup_search_title">Не шукати записів з резервного копіювання та кошиків</string>
     <string name="omit_backup_search_summary">Пропустити групу \'Резервна копія\' та Кошик серед результатів пошуку</string>
     <string name="progress_create">Створення нової бази даних&#8230;</string>
@@ -124,7 +123,6 @@
     <string name="underline">Підкреслення</string>
     <string name="unsupported_db_version">Непідтримувана версія бази даних.</string>
     <string name="uppercase">Верхній регістр</string>
-    <string name="warning_unmounted">Ваша карта пам’яті зараз не змонтована на телефоні. Ви не зможете завантажити або створити базу даних.</string>
     <string name="version_label">Версія %1$s</string>
 
     <string name="education_unlock_summary">Введіть пароль і/або файл ключа для відкриття бази даних.</string>

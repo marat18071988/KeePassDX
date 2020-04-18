@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2019 Jeremy Jamet / Kunzisoft.
-     
- This file is part of KeePassDX.
+    Copyright 2020 Jeremy Jamet / Kunzisoft.
 
-  KeePassDX is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+    This file is part of KeePassDX.
 
-  KeePassDX is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+    KeePassDX is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-  You should have received a copy of the GNU General Public License
-  along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
-  
-  Catalan translation by Oriol Garrote
-  
+    KeePassDX is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
+    Catalan translation by Oriol Garrote
 -->
 <resources>
     <string name="feedback">Comentaris:</string>
@@ -107,7 +105,6 @@
     <string name="never">Mai</string>
     <string name="no_results">Cap resultat de cerca</string>
     <string name="no_url_handler">Sense gestor per aquesta url.</string>
-    <string name="open_recent">Obre base de dades recent :</string>
     <string name="omit_backup_search_title">No cerquis entrades a còpia de seguretat ni paperera</string>
     <string name="omit_backup_search_summary">Omet els grups \'Còpia de seguretat\' i paperera dels resultats de cerca</string>
     <string name="progress_create">Creant nova base de dades&#8230;</string>
@@ -128,7 +125,6 @@
     <string name="underline">Subratllat</string>
     <string name="unsupported_db_version">Versió de la base de dades no suportada.</string>
     <string name="uppercase">Majúscules</string>
-    <string name="warning_unmounted">La teva tarja SD no està muntada al teu dispositiu. No podràs carregar ni guardar una base de dades.</string>
     <string name="version_label">Versió %1$s</string>
 
     <string name="education_unlock_summary">Introdueix una contrasenya i/o un arxiu clau per desbloquejar la base de dades.</string>

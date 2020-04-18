@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright 2019 Jeremy Jamet / Kunzisoft.
-     
- This file is part of KeePassDX.
+    Copyright 2020 Jeremy Jamet / Kunzisoft.
 
-  KeePassDX is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+    This file is part of KeePassDX.
 
-  KeePassDX is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+    KeePassDX is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-  You should have received a copy of the GNU General Public License
-  along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
-  
-  Basque translation by David García-Abad, released under GPL V2.
---><resources>
+    KeePassDX is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
+    Basque translation by David García-Abad
+-->
+<resources>
     <string name="feedback">Feedback:</string>
     <string name="homepage">Hasiera orria</string>
     <string name="about_description">Keepass pasahitza kudeatzailearen Androiderako inplementazioa</string>
@@ -115,7 +115,6 @@
     <string name="never">Inoiz ez</string>
     <string name="no_results">Emaitzarik gabeko bilaketa</string>
     <string name="no_url_handler">URL kudatzeko euskarririk ez.</string>
-    <string name="open_recent">Duela gutxiko datubasea ireki :</string>
     <string name="omit_backup_search_title">Ez bilatu segurtasun kopiaren sarreretan</string>
     <string name="omit_backup_search_summary">Kendu segurtasun kopien taldea bilaketen emaitzetatik (.kdb fitxategie dagokie bakarrik)</string>
     <string name="progress_create">Datubase berria sortzen…</string>
@@ -137,7 +136,6 @@
     <string name="underline">Azpimarratu</string>
     <string name="unsupported_db_version">Euskarririk gabeko datubase bertsioa.</string>
     <string name="uppercase">Maiuskulak</string>
-    <string name="warning_unmounted">Une honetan zure sd txartela ez dago montatua zure dispositiboan. Ezingo duzu zure datubasea kargatu edo sortu.</string>
     <string name="version_label">Bertsioa %1$s</string>
 
     <string name="education_unlock_summary">Sartu pasahitz eta / edo gako fitxategi bat zure datubasea desblokeatzeko.</string>

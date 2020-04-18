@@ -15,6 +15,7 @@
  * Material design with **themes**
  * **AutoFill** and Integration
  * Field filling **keyboard**
+ * **History** of each entry
  * Precise management of **settings**
  * Code written in **native language** *(Kotlin / Java / JNI / C)*
 
@@ -53,9 +54,9 @@ You can contribute in different ways to help us on our work.
       alt="Get it on Google Play"
 	height="80">](https://play.google.com/store/apps/details?id=com.kunzisoft.keepass.free)
 	
-## F.A.Q.
+## Frequently Asked Questions
 
-Other questions? You can read the [F.A.Q.](https://github.com/Kunzisoft/KeePassDX/wiki/F.A.Q.) 
+Other questions? You can read the [FAQ](https://github.com/Kunzisoft/KeePassDX/wiki/FAQ) 
 	
 ## Other devices
 

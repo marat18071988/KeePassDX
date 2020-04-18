@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2020 Jeremy Jamet / Kunzisoft.
+
+    This file is part of KeePassDX.
+
+    KeePassDX is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    KeePassDX is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with KeePassDX.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <resources>
     <string name="about_description">Android implementacija KeePass upravitelja lozinki</string>
     <string name="accept">Prihvati</string>
@@ -132,7 +150,6 @@
     <string name="no_url_handler">Instalirajte web preglednik da bi ste otvorili ovaj URL.</string>
     <string name="select_database_file">Otvori postojeću bazu podataka</string>
     <string name="create_keepass_file">Kreiraj novu bazu podataka</string>
-    <string name="open_recent">Nedavne baze podataka</string>
     <string name="omit_backup_search_title">Ne pretražuj kopije unosa</string>
     <string name="progress_create">Kreiranje nove baze podataka…</string>
     <string name="protection">Zaštita</string>

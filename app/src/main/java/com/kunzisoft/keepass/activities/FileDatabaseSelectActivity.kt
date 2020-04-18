@@ -26,13 +26,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Environment
 import android.os.Handler
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -65,7 +63,7 @@ class FileDatabaseSelectActivity : StylishActivity(),
 
     // Views
     private var coordinatorLayout: CoordinatorLayout? = null
-    private var fileListContainer: View? = null
+    private var fileManagerExplanationButton: View? = null
     private var createButtonView: View? = null
     private var openDatabaseButtonView: View? = null
 
@@ -87,11 +85,15 @@ class FileDatabaseSelectActivity : StylishActivity(),
 
         setContentView(R.layout.activity_file_selection)
         coordinatorLayout = findViewById(R.id.activity_file_selection_coordinator_layout)
-        fileListContainer = findViewById(R.id.container_file_list)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.title = ""
         setSupportActionBar(toolbar)
+
+        fileManagerExplanationButton = findViewById(R.id.file_manager_explanation_button)
+        fileManagerExplanationButton?.setOnClickListener {
+            UriUtil.gotoUrl(this, R.string.file_manager_explanation_url)
+        }
 
         // Create button
         createButtonView = findViewById(R.id.create_database_button)
@@ -128,7 +130,6 @@ class FileDatabaseSelectActivity : StylishActivity(),
                         databaseFileUri,
                         UriUtil.parse(fileDatabaseHistoryEntityToOpen.keyFileUri))
             }
-            updateFileListVisibility()
         }
         mAdapterDatabaseHistory?.setOnFileDatabaseHistoryDeleteListener { fileDatabaseHistoryToDelete ->
             // Remove from app database
@@ -137,7 +138,6 @@ class FileDatabaseSelectActivity : StylishActivity(),
                 fileHistoryDeleted?.let { databaseFileHistoryDeleted ->
                     mAdapterDatabaseHistory?.deleteDatabaseFileHistory(databaseFileHistoryDeleted)
                     mAdapterDatabaseHistory?.notifyDataSetChanged()
-                    updateFileListVisibility()
                 }
             }
             true
@@ -258,25 +258,6 @@ class FileDatabaseSelectActivity : StylishActivity(),
             overridePendingTransition(0, 0)
     }
 
-    private fun updateExternalStorageWarning() {
-        // To show errors
-        var warning = -1
-        val state = Environment.getExternalStorageState()
-        if (state == Environment.MEDIA_MOUNTED_READ_ONLY) {
-            warning = R.string.read_only_warning
-        } else if (state != Environment.MEDIA_MOUNTED) {
-            warning = R.string.warning_unmounted
-        }
-
-        val labelWarningView = findViewById<TextView>(R.id.label_warning)
-        if (warning != -1) {
-            labelWarningView.setText(warning)
-            labelWarningView.visibility = View.VISIBLE
-        } else {
-            labelWarningView.visibility = View.INVISIBLE
-        }
-    }
-
     override fun onResume() {
         val database = Database.getInstance()
         if (database.loaded) {
@@ -284,8 +265,6 @@ class FileDatabaseSelectActivity : StylishActivity(),
         }
 
         super.onResume()
-
-        updateExternalStorageWarning()
 
         // Construct adapter with listeners
         if (PreferencesUtil.showRecentFiles(this)) {
@@ -302,13 +281,11 @@ class FileDatabaseSelectActivity : StylishActivity(),
                                     true
                             })
                     mAdapterDatabaseHistory?.notifyDataSetChanged()
-                    updateFileListVisibility()
                 }
             }
         } else {
             mAdapterDatabaseHistory?.clearDatabaseFileHistoryList()
             mAdapterDatabaseHistory?.notifyDataSetChanged()
-            updateFileListVisibility()
         }
 
         // Register progress task
@@ -328,13 +305,6 @@ class FileDatabaseSelectActivity : StylishActivity(),
         outState.putBoolean(EXTRA_STAY, true)
         // to retrieve the URI of a created database after an orientation change
         outState.putParcelable(EXTRA_DATABASE_URI, mDatabaseFileUri)
-    }
-
-    private fun updateFileListVisibility() {
-        if (mAdapterDatabaseHistory?.itemCount == 0)
-            fileListContainer?.visibility = View.INVISIBLE
-        else
-            fileListContainer?.visibility = View.VISIBLE
     }
 
     override fun onAssignKeyDialogPositiveClick(

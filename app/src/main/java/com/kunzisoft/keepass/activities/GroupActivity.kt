@@ -848,7 +848,7 @@ class GroupActivity : LockingActivity(),
                                 removeChildren()
 
                                 title = name
-                                this.icon = icon // TODO custom icon
+                                this.icon = icon // TODO custom icon #96
                             }
                         }
                         // If group updated save it in the database
@@ -1025,7 +1025,7 @@ class GroupActivity : LockingActivity(),
          * 		Keyboard Launch
          * -------------------------
          */
-        // TODO implement pre search to directly open the direct group
+        // TODO implement pre search to directly open the direct group #280
         fun launchForKeyboardSelection(context: Context,
                                        readOnly: Boolean = PreferencesUtil.enableReadOnlyDatabase(context)) {
             checkTimeAndBuildIntent(context, null, null, readOnly) { intent ->
