@@ -25,6 +25,7 @@ import androidx.annotation.RequiresApi
 import android.util.Log
 import android.view.View
 import android.view.autofill.AutofillId
+import android.view.autofill.AutofillValue
 import java.util.*
 
 
@@ -32,7 +33,8 @@ import java.util.*
  * Parse AssistStructure and guess username and password fields.
  */
 @RequiresApi(api = Build.VERSION_CODES.O)
-internal class StructureParser(private val structure: AssistStructure) {
+internal class StructureParser(private val structure: AssistStructure,
+                               private val retrieveValues: Boolean = false) {
     private var result: Result? = null
     private var usernameCandidate: AutofillId? = null
 
@@ -40,6 +42,7 @@ internal class StructureParser(private val structure: AssistStructure) {
         try {
             result = Result()
             result?.apply {
+                allowValues = true
                 usernameCandidate = null
                 mainLoop@ for (i in 0 until structure.windowNodeCount) {
                     val windowNode = structure.getWindowNodeAt(i)
@@ -110,6 +113,7 @@ internal class StructureParser(private val structure: AssistStructure) {
                 it.equals(View.AUTOFILL_HINT_PASSWORD, true)
                         || it.contains("password", true) -> {
                     result?.passwordId = autofillId
+                    result?.passwordValue = node.autofillValue
                     Log.d(TAG, "Autofill password hint")
                     return true
                 }
@@ -145,6 +149,7 @@ internal class StructureParser(private val structure: AssistStructure) {
                                 }
                                 "password" -> {
                                     result?.passwordId = autofillId
+                                    result?.passwordValue = node.autofillValue
                                     Log.d(TAG, "Autofill password web type: ${node.htmlInfo?.tag} ${node.htmlInfo?.attributes}")
                                     return true
                                 }
@@ -176,6 +181,7 @@ internal class StructureParser(private val structure: AssistStructure) {
                         inputType and InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD != 0 ||
                         inputType and InputType.TYPE_NUMBER_VARIATION_PASSWORD != 0 -> {
                     result?.passwordId = autofillId
+                    result?.passwordValue = node.autofillValue
                     Log.d(TAG, "Autofill password android type: $inputType")
                     return true
                 }
@@ -230,6 +236,14 @@ internal class StructureParser(private val structure: AssistStructure) {
             }
             return all.toTypedArray()
         }
+
+        var allowValues = false
+
+        var passwordValue: AutofillValue? = null
+            set(value) {
+                if (allowValues && field == null)
+                    field = value
+            }
     }
 
     companion object {
